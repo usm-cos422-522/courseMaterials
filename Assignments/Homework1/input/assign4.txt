@@ -1,0 +1,20 @@
+import java.util.Scanner; public class Program5 { 
+public static void main(String[] args) { // TODO Auto-generated method stub 
+System.out.println("Welcome to the disemvoweling utility"); Scanner Pablo=new Scanner(System.in); //initialization scanner System.out.print("Enter your phrase:"); String input= Pablo.nextLine(); System.out.println(input); 
+String disccern=""; 
+for(int j=0;j<input.length();j++) { 
+if((input.charAt(j)=='a')||(input.charAt(j)=='A')|| (input.charAt(j)=='e')||(input.charAt(j)=='E')|| (input.charAt(j)=='i')||(input.charAt(j)=='I')|| (input.charAt(j)=='o')||(input.charAt(j)=='O')|| 
+April 28, 2021 
+(input.charAt(j)=='u')||(input.charAt(j)=='U')) 
+{ // do not do anything } 
+else { disccern=disccern +input.charAt(j); 
+} 
+// i added non vowel 
+} String dublicateRemoved=""; // i removed code to multiple duplicates for(int i=0;i<disccern.length()-1;i++) { if(!(disccern.charAt(j)==disccern.charAt(i+1))) 
+{ dublicateRemoved=dublicateRemoved+disccern.charAt(j); 
+} 
+} 
+dublicateRemoved=dublicateRemoved + disccern.charAt(disccern.length()-1); 
+System.out.println("The disemvoweled phrase is: "+dublicateRemoved); int reduction=((input.length()-dublicateRemoved.length())*100)/input.length(); System.out.println("Reduced from "+input.length()+" to "+dublicateRemoved.length()+" 
+characters. Reduction rate of "+reduction+"%"); 
+} } 
